@@ -1,0 +1,23 @@
+server:
+  port: 5000
+  servlet:
+    context-path: /rate
+spring:
+  data:
+    mongodb:
+      host: 'localhost'
+      port: 27017
+      authentication-database: 'admin'
+      username: 'azor'
+      password: 'azor'
+      database: 'currency'
+      auto-index-creation: true
+base-url: https://openexchangerates.org/api/latest.json
+timeout: 1000
+params:
+  app-id: 5795889c383647b5b8f0777155991dcf
+# once a day
+#interval-in-cron: 0 0 0 * * *
+# once an hour
+interval-in-cron: 0 0 * * * *
+base-currency: USD
